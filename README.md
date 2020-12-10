@@ -20,7 +20,7 @@
     </application>
 </manifest>
 ```
-
+# Android code
 ```js
  //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
                 Toast.makeText(getApplicationContext(),"必須輸入帳號或密碼",Toast.LENGTH_LONG).show();
