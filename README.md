@@ -20,5 +20,7 @@
     </application>
 </manifest>
 ```
-###### 參考資料 
+###### *參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
+######      *androidlogin
+http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialognot.html 
