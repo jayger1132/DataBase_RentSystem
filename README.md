@@ -20,7 +20,14 @@
     </application>
 </manifest>
 ```
-###### *參考資料 
+
+```js
+ //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
+                Toast.makeText(getApplicationContext(),"必須輸入帳號或密碼",Toast.LENGTH_LONG).show();
+                //輸入回到 textaccount
+                textaccount.requestFocus();
+```
+###### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
-######      *androidlogin
+###### AndroidLogin
 http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialognot.html 
