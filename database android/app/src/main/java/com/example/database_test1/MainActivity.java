@@ -3,7 +3,9 @@ package com.example.database_test1;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,16 +16,19 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView;
-    Button button;
-    String result;
+    private EditText textaccount=null,textpassword=null;
+    //private TextView textView;
+    private Button button;
+    private  String result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //link 元件
+        //textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
-        textView = findViewById(R.id.textView);
+        textaccount = (EditText) findViewById(R.id.account);
+        textpassword = (EditText) findViewById(R.id.password);
         //Listener
         button.setOnClickListener(myListener);
 
@@ -33,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         //按下button所執行的code
         public void onClick(View v){
+            if(textaccount.getText().toString().equals("")||textpassword.getText().toString().equals("")){
+                //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
+                Toast.makeText(getApplicationContext(),"必須輸入帳號或密碼",Toast.LENGTH_LONG).show();
+                textaccount.requestFocus();
+            }
             Thread thread = new Thread(mutiThread);
             thread.start();
         }
@@ -44,7 +54,7 @@ private Runnable mutiThread = new Runnable(){
     public void run()
     {
         try {
-            URL url = new URL("http://192.168.1.28/index.php");
+            URL url = new URL("http://192.168.1.28/applogin.php");
             // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             // 建立 Google 比較挺的 HttpURLConnection 物件
@@ -86,11 +96,31 @@ private Runnable mutiThread = new Runnable(){
         runOnUiThread(new Runnable() {
             public void run() {
                 String Fresult="";
-                String[] tokens = result.split(";");
-                for(String token:tokens){
-                    Fresult+=token+"\n";
+
+                String[] act ,pwd = result.split(";");
+                for(String test1:pwd){
+
+                    //切割出 act , pwd
+                    String act2 = test1.substring(0,test1.lastIndexOf("&"));
+                    String pwd2 = test1.substring(test1.lastIndexOf("&")+1);
+
+                    if(textaccount.getText().toString().equals(act2)){
+                        if(textpassword.getText().toString().equals(pwd2)){
+                            Toast.makeText(getApplicationContext(),"唉唷不錯唷",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"帳號或密碼錯誤",Toast.LENGTH_SHORT).show();
+                            textaccount.requestFocus();
+                        }
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"帳號或密碼錯誤",Toast.LENGTH_SHORT).show();
+                        textaccount.requestFocus();
+                    }
+                    //測試字串
+                    //Fresult+=act2+pwd2+"\n";
                 }
-                textView.setText(Fresult); // 更改顯示文字
+                //textView.setText(Fresult); // 更改顯示文字
             }
         });
     }
