@@ -1,5 +1,6 @@
 package com.example.database_test1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -95,32 +96,52 @@ private Runnable mutiThread = new Runnable(){
         // 當這個執行緒完全跑完後執行
         runOnUiThread(new Runnable() {
             public void run() {
-                String Fresult="";
+                /*跳轉*/
+                Intent intent= new Intent();
+                intent.setClass(MainActivity.this,index.class);
 
+                String Fresult="",intentact="",intentpwd="";
+                /*以";" 作為分界*/
                 String[] act ,pwd = result.split(";");
+                boolean flag = false;
+                /*檢查每一行的切割的字串*/
                 for(String test1:pwd){
-
                     //切割出 act , pwd
                     String act2 = test1.substring(0,test1.lastIndexOf("&"));
                     String pwd2 = test1.substring(test1.lastIndexOf("&")+1);
-
                     if(textaccount.getText().toString().equals(act2)){
-                        if(textpassword.getText().toString().equals(pwd2)){
+                        if(textpassword.getText().toString().equals(pwd2)){ /*login correct*/
+                            flag=true;
                             Toast.makeText(getApplicationContext(),"唉唷不錯唷",Toast.LENGTH_LONG).show();
+                            intentact=act2;
+                            intentpwd=pwd2;
                         }
                         else{
-                            Toast.makeText(getApplicationContext(),"帳號或密碼錯誤",Toast.LENGTH_SHORT).show();
                             textaccount.requestFocus();
                         }
                     }
                     else{
-                        Toast.makeText(getApplicationContext(),"帳號或密碼錯誤",Toast.LENGTH_SHORT).show();
                         textaccount.requestFocus();
+
                     }
                     //測試字串
                     //Fresult+=act2+pwd2+"\n";
                 }
                 //textView.setText(Fresult); // 更改顯示文字
+
+                if(flag==true) {
+                    /*transfer data*/
+                    Bundle bundle = new Bundle();
+                    bundle.putString("act", intentact);
+                    bundle.putString("pwd", intentpwd);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"帳號或密碼錯誤",Toast.LENGTH_SHORT).show();
+                }
+                // 執行附帶資料的 Intent
+
             }
         });
     }
