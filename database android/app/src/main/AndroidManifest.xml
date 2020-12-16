@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:label="首頁" android:name=".index"></activity>
+        <activity android:label="房屋" android:name=".house"></activity>
     </application>
 
 </manifest>

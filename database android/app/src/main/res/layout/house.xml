@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".index">
 
 
 
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="查詢"
+        android:text="login out"
         android:textSize="26dp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="60dp" />

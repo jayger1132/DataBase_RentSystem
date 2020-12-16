@@ -63,7 +63,7 @@ private Runnable mutiThread = new Runnable(){
             // 設定連線方式為 POST
             connection.setDoOutput(true); // 允許輸出
             connection.setDoInput(true); // 允許讀入
-            connection.setUseCaches(false); // 不使用快取
+            //connection.setUseCaches(false); // 不使用快取
             connection.connect(); // 開始連線
 
             int responseCode =
