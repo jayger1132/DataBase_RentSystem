@@ -27,6 +27,17 @@
                 //輸入回到 textaccount
                 textaccount.requestFocus();
 ```
+###### 有時候宣告沒有先打在全域 下面的private會吃不到
+```js 
+public class index extends AppCompatActivity {
+    //先宣告要使用的 item
+    private ListView lstregion;
+    private Button button;
+    private TextView txtShow;
+    String[] Region= new String[] {"後龍鎮","苗栗市","西湖鄉","頭屋鄉"};
+    Integer count;
+    ...
+```
 ###### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 ###### AndroidLogin
