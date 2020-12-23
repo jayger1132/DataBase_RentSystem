@@ -60,7 +60,7 @@ public class index extends AppCompatActivity {
                 if(lstregion.isItemChecked(i))
                     str += Region[i] + ";";
             }
-
+            //txtShow.setText(str);
             /*跳轉*/
             Intent intent= new Intent();
             intent.setClass(index.this,house.class);

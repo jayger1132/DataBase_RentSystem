@@ -55,7 +55,7 @@ private Runnable mutiThread = new Runnable(){
     public void run()
     {
         try {
-            URL url = new URL("http://192.168.1.28/applogin.php");
+            URL url = new URL("http://192.168.10.4/applogin.php");
             // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             // 建立 Google 比較挺的 HttpURLConnection 物件
@@ -110,7 +110,7 @@ private Runnable mutiThread = new Runnable(){
                     String act2 = test1.substring(0,test1.lastIndexOf("&"));
                     String pwd2 = test1.substring(test1.lastIndexOf("&")+1);
                     if(textaccount.getText().toString().equals(act2)){
-                        if(textpassword.getText().toString().equals(pwd2)){ /*login correct*/
+                        if(textpassword.getText().toString().equals(pwd2)){ //login correct
                             flag=true;
                             Toast.makeText(getApplicationContext(),"唉唷不錯唷",Toast.LENGTH_LONG).show();
                             intentact=act2;

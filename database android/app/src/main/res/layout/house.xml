@@ -28,20 +28,28 @@
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal">
 
-        <ListView
-            android:id="@+id/lstregion"
+        <GridView
+            android:id="@+id/gridregion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="160dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
+            android:numColumns="2"
+            android:padding="10dp"
             android:layout_gravity="center_horizontal">
-
-
-        </ListView>
-
+        </GridView>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgShow"
+        android:layout_width="wrap_content"
+        android:layout_height="334dp"
+        android:layout_below="@+id/GridView01"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hl201" />
 
     <Button
         android:id="@+id/button"
