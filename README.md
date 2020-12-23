@@ -40,8 +40,8 @@ public class index extends AppCompatActivity {
     ...
 ```
 ###### 將image丟入drawble 檔名只能有小寫字母以及數字
-####### drable的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
-->resource type選drawble ->avalible qualifiers選density 點 " >> "
+drable的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
+->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
 
 ###### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
