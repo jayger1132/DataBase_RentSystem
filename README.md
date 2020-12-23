@@ -39,7 +39,13 @@ public class index extends AppCompatActivity {
     Integer count;
     ...
 ```
+###### 將image丟入drawble 檔名只能有小寫字母以及數字
+####### drable的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
+->resource type選drawble ->avalible qualifiers選density 點 " >> "
+
 ###### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 ###### AndroidLogin
 http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialognot.html 
+###### 一次大量修改檔名 使用powershell
+https://officeguide.cc/batch-rename-multiple-files-tutorial-examples/
