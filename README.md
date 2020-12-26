@@ -60,9 +60,11 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
 ```
 
 
-###### 參考資料 
+##### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 ###### AndroidLogin
 http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialognot.html 
 ###### 一次大量修改檔名 使用powershell
 https://blog.gtwang.org/windows/how-to-batch-rename-files-in-windows/
+###### Scrollview
+https://blog.csdn.net/ACM_TH/article/details/51103889
