@@ -42,6 +42,23 @@ public class index extends AppCompatActivity {
 ###### 將image丟入drawble 檔名只能有小寫字母以及數字
 drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
 ->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
+###### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"> 
+    ...
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"> //這樣會讓所有版面呈現水平狀 horizontal--->vertical
+    ...
+    </LinearLayout>  
+</ScrollView>
+```
+
 
 ###### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
