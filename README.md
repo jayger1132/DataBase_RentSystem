@@ -1,4 +1,9 @@
 # DataBase_RentSystem 
+
+## 將image丟入drawble 檔名只能有小寫字母以及數字
+drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
+->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
+
 ## 新增res/xml/network_security_config.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -20,6 +25,23 @@
     </application>
 </manifest>
 ```
+## ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"> 
+    ...
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"> //這樣會讓所有版面呈現水平狀 horizontal--->vertical
+    ...
+    </LinearLayout>  
+</ScrollView>
+```
+
 # Android code
 #### 對話框
 ```js
@@ -38,25 +60,6 @@ public class index extends AppCompatActivity {
     String[] Region= new String[] {"後龍鎮","苗栗市","西湖鄉","頭屋鄉"};
     Integer count;
     ...
-```
-#### 將image丟入drawble 檔名只能有小寫字母以及數字
-drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
-->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
-#### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"> 
-    ...
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"> //這樣會讓所有版面呈現水平狀 horizontal--->vertical
-    ...
-    </LinearLayout>  
-</ScrollView>
 ```
 
 
