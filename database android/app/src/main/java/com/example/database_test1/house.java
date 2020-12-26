@@ -15,6 +15,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database_test1.HL.hl1;
+import com.example.database_test1.HL.hl2;
+import com.example.database_test1.ML.ml1;
+import com.example.database_test1.ML.ml2;
+import com.example.database_test1.TL.tl1;
+import com.example.database_test1.TL.tl2;
+import com.example.database_test1.YL.yl1;
+import com.example.database_test1.YL.yl2;
 
 public class house extends AppCompatActivity {
     private int[] HLimgId= {R.drawable.hl104,R.drawable.hl201},MLimgId={R.drawable.ml101,R.drawable.ml201}
@@ -22,6 +29,7 @@ public class house extends AppCompatActivity {
     private ImageView imgShow;
     private String str2="",trnsstr="",trnsintent="";
     private Integer trnsint=0;
+    private Intent intent=new Intent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -254,9 +262,12 @@ public class house extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
                     imgShow.setImageResource(HLimgId[position]);
-                    trnsintent="hl";
                     trnsint=position;
                     trnsstr="後龍鎮";
+                    if(trnsint==0)
+                        intent.setClass(house.this, hl1.class);
+                    else
+                        intent.setClass(house.this, hl2.class);
                 }
             };
     private GridView.OnItemClickListener gridviewListenerML=
@@ -267,6 +278,10 @@ public class house extends AppCompatActivity {
                     imgShow.setImageResource(MLimgId[position]);
                     trnsint=position;
                     trnsstr="苗栗市";
+                    if(trnsint==0)
+                        intent.setClass(house.this, ml1.class);
+                    else
+                        intent.setClass(house.this, ml2.class);
                 }
             };
     private GridView.OnItemClickListener gridviewListenerTL=
@@ -277,6 +292,10 @@ public class house extends AppCompatActivity {
                     imgShow.setImageResource(TLimgId[position]);
                     trnsint=position;
                     trnsstr="銅鑼鄉";
+                    if(trnsint==0)
+                        intent.setClass(house.this, tl1.class);
+                    else
+                        intent.setClass(house.this, tl2.class);
                 }
             };
     private GridView.OnItemClickListener gridviewListenerYL=
@@ -287,13 +306,15 @@ public class house extends AppCompatActivity {
                     imgShow.setImageResource(YLimgId[position]);
                     trnsint=position;
                     trnsstr="苑裡鎮";
+                    if(trnsint==0)
+                        intent.setClass(house.this, yl1.class);
+                    else
+                        intent.setClass(house.this, yl2.class);
                 }
             };
     private  Button.OnClickListener buttonListener=new Button.OnClickListener(){
         public void onClick(View v){
-            /*跳轉*/
-            Intent intent=new Intent();
-            intent.setClass(house.this, hl1.class);
+
             /*transfer data*/
             Bundle bundle=new Bundle();
             bundle.putString("selectR",trnsstr);

@@ -1,4 +1,4 @@
-package com.example.database_test1.HL;
+package com.example.database_test1.YL;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.database_test1.R;
 
-public class hl1 extends AppCompatActivity {
+public class yl2 extends AppCompatActivity {
     //先宣告要使用的 item
     private Button button;
     private TextView txtShow,txtprice,txttime,txtidentity,txtparkingspace,txtsex,txtmanagefee;
@@ -39,12 +39,12 @@ public class hl1 extends AppCompatActivity {
         Integer id=bundle.getInt("id");
         String str = selectR +"  "+id;
         txtShow.setText(str);
-        txtprice.setText("7,500 元/月\n");
-        txttime.setText("最短一年");
-        txtidentity.setText("學生");
-        txtparkingspace.setText("平面式停車位，費用另計");
+        txtprice.setText("6,000 元/月");
+        txttime.setText("一年");
+        txtidentity.setText("學生、上班族");
+        txtparkingspace.setText("無");
         txtsex.setText("男女生皆可");
-        txtmanagefee.setText("桌子,椅子,衣櫃,床,電視,冰箱,冷氣,洗衣機,網路,第四台,沙發");
+        txtmanagefee.setText("桌子,椅子,衣櫃,床,熱水器,電視,冰箱,冷氣,洗衣機,網路,第四台");
 
     }
 

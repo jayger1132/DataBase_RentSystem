@@ -26,6 +26,13 @@
         <activity android:label="首頁" android:name=".index"></activity>
         <activity android:label="房屋" android:name=".house"></activity>
         <activity android:label="後龍鎮" android:name=".HL.hl1"></activity>
+        <activity android:label="後龍鎮" android:name=".HL.hl2"></activity>
+        <activity android:label="苗栗市" android:name=".ML.ml1"></activity>
+        <activity android:label="苗栗市" android:name=".ML.ml2"></activity>
+        <activity android:label="銅鑼鄉" android:name=".TL.tl1"></activity>
+        <activity android:label="銅鑼鄉" android:name=".TL.tl2"></activity>
+        <activity android:label="苑裡鎮" android:name=".YL.yl1"></activity>
+        <activity android:label="苑裡鎮" android:name=".YL.yl2"></activity>
     </application>
 
 </manifest>
