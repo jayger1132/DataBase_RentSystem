@@ -25,6 +25,7 @@
         </activity>
         <activity android:label="首頁" android:name=".index"></activity>
         <activity android:label="房屋" android:name=".house"></activity>
+        <activity android:label="後龍鎮" android:name=".HL.hl1"></activity>
     </application>
 
 </manifest>

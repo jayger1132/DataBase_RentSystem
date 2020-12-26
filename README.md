@@ -48,4 +48,4 @@ https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-no
 ###### AndroidLogin
 http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialognot.html 
 ###### 一次大量修改檔名 使用powershell
-https://officeguide.cc/batch-rename-multiple-files-tutorial-examples/
+https://blog.gtwang.org/windows/how-to-batch-rename-files-in-windows/

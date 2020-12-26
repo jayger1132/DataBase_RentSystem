@@ -17,7 +17,7 @@ public class index extends AppCompatActivity {
     private ListView lstregion;
     private Button button;
     private TextView txtShow;
-    String[] Region= new String[] {"後龍鎮","苗栗市","西湖鄉","頭屋鄉"};
+    String[] Region= new String[] {"後龍鎮","苗栗市","銅鑼鄉","苑裡鎮"};
     Integer count;
 
     @Override
@@ -58,7 +58,7 @@ public class index extends AppCompatActivity {
             String str="";
             for(int i =0;i < count;i++){
                 if(lstregion.isItemChecked(i))
-                    str += Region[i] + ";";
+                    str += Region[i] + " ";
             }
             //txtShow.setText(str);
             /*跳轉*/

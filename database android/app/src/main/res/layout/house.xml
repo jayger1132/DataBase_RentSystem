@@ -1,65 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".index">
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="right">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txtshow"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="aaa"
-            android:textSize="28dp" />
-    </LinearLayout>
+            android:gravity="end">
 
+            <TextView
+                android:id="@+id/txtshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaa"
+                android:textSize="28sp" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_gravity="center_horizontal">
+            <GridView
+                android:id="@+id/gridregionHL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="20dp"
+                android:numColumns="2"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal">
+            </GridView>
 
         <GridView
-            android:id="@+id/gridregion"
+            android:id="@+id/gridregionML"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="12dp"
             android:layout_marginEnd="20dp"
             android:numColumns="2"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal">
-        </GridView>
+            android:padding="10dp" />
 
+        <GridView
+            android:id="@+id/gridregionTL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            android:numColumns="2"
+            android:padding="10dp" />
+
+        <GridView
+            android:id="@+id/gridregionYL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            android:numColumns="2"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/imgShow"
+            android:layout_width="wrap_content"
+            android:layout_height="334dp"
+            android:layout_below="@+id/GridView01"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="login out"
+            android:textSize="26dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="60dp" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgShow"
-        android:layout_width="wrap_content"
-        android:layout_height="334dp"
-        android:layout_below="@+id/GridView01"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/hl201" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="login out"
-        android:textSize="26dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-
-</LinearLayout>
+</ScrollView>
