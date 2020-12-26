@@ -21,14 +21,14 @@
 </manifest>
 ```
 # Android code
-###### 對話框
+#### 對話框
 ```js
  //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
                 Toast.makeText(getApplicationContext(),"必須輸入帳號或密碼",Toast.LENGTH_LONG).show();
                 //輸入回到 textaccount
                 textaccount.requestFocus();
 ```
-###### 有時候宣告沒有先打在全域 下面的private會吃不到
+#### 有時候宣告沒有先打在全域 下面的private會吃不到
 ```js 
 public class index extends AppCompatActivity {
     //先宣告要使用的 item
@@ -39,10 +39,10 @@ public class index extends AppCompatActivity {
     Integer count;
     ...
 ```
-###### 將image丟入drawble 檔名只能有小寫字母以及數字
+#### 將image丟入drawble 檔名只能有小寫字母以及數字
 drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
 ->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
-###### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
+#### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
