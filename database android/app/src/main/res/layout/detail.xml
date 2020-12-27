@@ -6,149 +6,182 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="end">
 
-        <TextView
-            android:id="@+id/txtshow"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="aaa"
-            android:textSize="28sp" />
-    </LinearLayout>
+            android:gravity="end">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="押金 :  "
-        android:textSize="28sp" />
-    <TextView
-        android:id="@+id/txtprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="28sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/txtshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaa"
+                android:textSize="28sp" />
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="租期 :  "
-            android:textSize="28sp" />
-        <TextView
-            android:id="@+id/txttime"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="押金 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="28sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租期 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="身分要求 :  "
-            android:textSize="28sp" />
-        <TextView
-            android:id="@+id/txtidentity"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身分要求 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtidentity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="28sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="車位 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtparkingspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="車位 :  "
-            android:textSize="28sp" />
-        <TextView
-            android:id="@+id/txtparkingspace"
-            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性別 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtsex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="28sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="性別 :  "
-            android:textSize="28sp" />
-        <TextView
-            android:id="@+id/txtsex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="28sp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="房東提供 :  "
-            android:textSize="28sp" />
-        <TextView
-            android:id="@+id/txtmanagefee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="28sp" />
-    </LinearLayout>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房東提供 :  "
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtmanagefee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="28sp" />
+        </LinearLayout>
 
 
-    <com.example.database_test1.ExpandableHeightGridView
-        android:id="@+id/gridregion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:verticalSpacing="6dp"
-        android:isScrollContainer="false"
-        android:numColumns="2"
-        android:padding="10dp"
-        android:layout_gravity="center_horizontal">
-    </com.example.database_test1.ExpandableHeightGridView>
-    <ImageView
-        android:id="@+id/imgShow"
-        android:layout_width="wrap_content"
-        android:layout_height="334dp"
-        android:layout_below="@+id/GridView01"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitCenter" />
+        <com.example.database_test1.ExpandableHeightGridView
+            android:id="@+id/gridregion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:isScrollContainer="false"
+            android:numColumns="2"
+            android:padding="10dp"
+            android:verticalSpacing="6dp"></com.example.database_test1.ExpandableHeightGridView>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="查詢"
-        android:textSize="26dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="60dp" />
+        <ImageView
+            android:id="@+id/imgShow"
+            android:layout_width="wrap_content"
+            android:layout_height="334dp"
+            android:layout_below="@+id/GridView01"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/buttonmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="位置"
+                android:layout_marginRight="20sp"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/buttoncall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="聯繫房東"
+                android:textSize="26sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

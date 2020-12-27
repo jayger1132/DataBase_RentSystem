@@ -1,7 +1,10 @@
 package com.example.database_test1.YL;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +16,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.database_test1.ExpandableHeightGridView;
+import com.example.database_test1.HL.hl1;
+import com.example.database_test1.MapsActivity;
 import com.example.database_test1.R;
 
 public class yl2 extends AppCompatActivity {
     //先宣告要使用的 item
-    private Button button;
+    private Button buttonmap,buttoncall;
     private TextView txtShow,txtprice,txttime,txtidentity,txtparkingspace,txtsex,txtmanagefee;
     private ImageView imgShow;
     private ExpandableHeightGridView gridView;
@@ -39,9 +45,11 @@ public class yl2 extends AppCompatActivity {
         txtmanagefee=(TextView)findViewById(R.id.txtmanagefee);
         imgShow=(ImageView) findViewById(R.id.imgShow);
         gridView =(ExpandableHeightGridView) findViewById(R.id.gridregion);
-        button=(Button)findViewById(R.id.button);
+        buttonmap=(Button)findViewById(R.id.buttonmap);
+        buttoncall=(Button)findViewById(R.id.buttoncall);
         // 設定 button 的 Listener
-        button.setOnClickListener(buttonListener);
+        buttonmap.setOnClickListener(buttonListener);
+        buttoncall.setOnClickListener(buttonListener);
         MyAdapter adapter=new MyAdapter(this);
         // 設定 GridView 的資料來源
         gridView.setAdapter(adapter);
@@ -105,7 +113,33 @@ public class yl2 extends AppCompatActivity {
 
     private  Button.OnClickListener buttonListener=new Button.OnClickListener(){
         public void onClick(View v){
-            finish();
+            switch (v.getId()){
+                case R.id.buttoncall: {
+                    Uri uri = Uri.parse("tel:0911245891");
+                    Intent intent = new Intent(Intent.ACTION_CALL, uri);
+                    //  確認 CALL_PHONE 權限是否已授權
+                    if (ActivityCompat.checkSelfPermission(yl2.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                        startActivity(intent);
+                    }
+                    break;
+                }
+                case R.id.buttonmap: {
+                    String name="苗栗縣苑裡鎮天下路75號";
+                    Double v1=24.443125,v2=120.652615;
+                    /*跳轉*/
+                    Intent intent= new Intent();
+                    intent.setClass(yl2.this, MapsActivity.class);
+                    /*transfer data*/
+                    Bundle bundle = new Bundle();
+                    bundle.putString("name",name);
+                    bundle.putDouble("v",v1);
+                    bundle.putDouble("v2",v2);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                    break;
+                }
+
+            }
         }
     };
 

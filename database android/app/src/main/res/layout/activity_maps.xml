@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地點："
+            android:textColor="#0000FF"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txtShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0000FF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtMapType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="樣式："
+            android:layout_marginLeft="20sp"
+            android:textColor="#0000FF"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spntype"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp" />
+</LinearLayout>
