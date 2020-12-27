@@ -95,7 +95,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
 ```
 #### activity_maps.xml
 ```xml
-<!-- 如果不是用new 的通常上面的資料包會找不到 -->
+<!-- 如果不是用new的通常上面的name資料包會找不到 -->
 
 ...
     <fragment
