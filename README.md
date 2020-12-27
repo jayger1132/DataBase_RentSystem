@@ -41,7 +41,33 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </LinearLayout>  
 </ScrollView>
 ```
-
+## ScrollView 跟 girdview 會發生衝突 要重新自訂一個gridview 新增的java code放參考資料
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"> 
+    ...
+    <com.example.database_test1.ExpandableHeightGridView
+        android:id="@+id/gridregion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="6dp"
+        android:isScrollContainer="false"
+        android:numColumns="2"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
+    </com.example.database_test1.ExpandableHeightGridView>
+    ...
+</ScrollView>
+```
+```js
+//要注意宣告時要更改為 定義girdview的名稱
+    private ExpandableHeightGridView gridView;
+    gridView =(ExpandableHeightGridView) findViewById(R.id.gridregion);
+    gridView.setExpanded(true); //拉長
+```
 # Android code
 #### 對話框
 ```js
@@ -71,3 +97,5 @@ http://hsingjungchen.blogspot.com/2017/06/android-sharedpreferencesalertdialogno
 https://blog.gtwang.org/windows/how-to-batch-rename-files-in-windows/
 ###### Scrollview
 https://blog.csdn.net/ACM_TH/article/details/51103889
+###### 重新定義gridview 處理scrollview與girdview衝突
+https://stackoverflow.com/questions/8481844/gridview-height-gets-cut
