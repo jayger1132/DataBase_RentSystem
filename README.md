@@ -1,10 +1,10 @@
 # DataBase_RentSystem 
 
-#### 將image丟入drawble 檔名只能有小寫字母以及數字
+### 將image丟入drawble 檔名只能有小寫字母以及數字
 drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
 ->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
 
-#### 新增res/xml/network_security_config.xml
+### 新增res/xml/network_security_config.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
@@ -12,7 +12,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </domain-config>
 </network-security-config>
 ```
-#### 在AndroidManifest.xml 加上網路連線的權限
+### 在AndroidManifest.xml 加上網路連線的權限
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest ...>
@@ -25,7 +25,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </application>
 </manifest>
 ```
-#### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
+### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,7 +41,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </LinearLayout>  
 </ScrollView>
 ```
-#### ScrollView 跟 girdview 會發生衝突 要重新自訂一個gridview 新增的java code放參考資料
+### ScrollView 跟 girdview 會發生衝突 要重新自訂一個gridview 新增的java code放參考資料
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -68,7 +68,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     gridView =(ExpandableHeightGridView) findViewById(R.id.gridregion);
     gridView.setExpanded(true); //拉長
 ```
-#### 利用intent撥通電話需要先申請權限
+### 利用intent撥通電話需要先申請權限
 ```xml
 <uses-permission android:name="android.permission.CALL_PHONE" />
 ```
@@ -83,17 +83,17 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
 ...
 ```
 # Map與Api
-#### 申請Api利用google console 建立專案並申請一個api
+### 申請Api利用google console 建立專案並申請一個api
 ##### 需要先編輯 為Android應用程式限定
 ##### 套件名稱 自己的packge SHA-1 憑證指紋 Grandle在右手邊(預設) 參考資料有
-#### google_maps_api.xml
+### google_maps_api.xml
 ```xml
 <!-- 先利用 new->google->google maps activity 建立基本的檔案-->
 <resources>
 <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">輸入自己的api</string>
 </resources>
 ```
-#### activity_maps.xml
+### activity_maps.xml
 ```xml
 <!-- 如果不是用new的通常上面的name資料包會找不到 -->
 
@@ -106,19 +106,19 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
         android:layout_margin="15dp" />
 ...
 ```
-#### MapsActivity 利用LatLng 來存放座標 
+### MapsActivity 利用LatLng 來存放座標 
 ```js
 LatLng[] aryLatLng= new LatLng[]{new LatLng(v,v1),new LatLng(v,v1)}
 ```
 # Android code 
-#### 對話框
+### 對話框
 ```js
  //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
                 Toast.makeText(getApplicationContext(),"必須輸入帳號或密碼",Toast.LENGTH_LONG).show();
                 //輸入回到 textaccount
                 textaccount.requestFocus();
 ```
-#### 有時候宣告沒有先打在全域 下面的private會吃不到
+### 有時候宣告沒有先打在全域 下面的private會吃不到
 ```js 
 public class index extends AppCompatActivity {
     //先宣告要使用的 item
