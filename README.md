@@ -1,10 +1,10 @@
 # DataBase_RentSystem 
 
-## 將image丟入drawble 檔名只能有小寫字母以及數字
+#### 將image丟入drawble 檔名只能有小寫字母以及數字
 drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource Dir
 ->resource type選drawble ->avalible qualifiers選density 點 " >> " -> 完成
 
-## 新增res/xml/network_security_config.xml
+#### 新增res/xml/network_security_config.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
@@ -12,7 +12,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </domain-config>
 </network-security-config>
 ```
-## 在AndroidManifest.xml 加上網路連線的權限
+#### 在AndroidManifest.xml 加上網路連線的權限
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest ...>
@@ -25,7 +25,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </application>
 </manifest>
 ```
-## ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
+#### ScrollView 如果中間有設定horizontal 要特別注意有可能會沒辦法顯示
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,7 +41,7 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     </LinearLayout>  
 </ScrollView>
 ```
-## ScrollView 跟 girdview 會發生衝突 要重新自訂一個gridview 新增的java code放參考資料
+#### ScrollView 跟 girdview 會發生衝突 要重新自訂一個gridview 新增的java code放參考資料
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
