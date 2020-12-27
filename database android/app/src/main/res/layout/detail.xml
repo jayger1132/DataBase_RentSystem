@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -118,6 +121,25 @@
             android:textSize="28sp" />
     </LinearLayout>
 
+
+    <com.example.database_test1.ExpandableHeightGridView
+        android:id="@+id/gridregion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="6dp"
+        android:isScrollContainer="false"
+        android:numColumns="2"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
+    </com.example.database_test1.ExpandableHeightGridView>
+    <ImageView
+        android:id="@+id/imgShow"
+        android:layout_width="wrap_content"
+        android:layout_height="334dp"
+        android:layout_below="@+id/GridView01"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -127,6 +149,6 @@
         android:textSize="26dp"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="60dp" />
+    </LinearLayout>
 
-
-</LinearLayout>
+</ScrollView>
