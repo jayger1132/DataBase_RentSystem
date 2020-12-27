@@ -68,7 +68,49 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
     gridView =(ExpandableHeightGridView) findViewById(R.id.gridregion);
     gridView.setExpanded(true); //拉長
 ```
-# Android code
+#### 利用intent撥通電話需要先申請權限
+```xml
+<uses-permission android:name="android.permission.CALL_PHONE" />
+```
+```js
+...
+    Uri uri = Uri.parse("tel:0999123456");
+    Intent intent = new Intent(Intent.ACTION_CALL, uri);
+    //  確認 CALL_PHONE 權限是否已授權
+    if (ActivityCompat.checkSelfPermission(hl1.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+            startActivity(intent);
+        }
+...
+```
+# Map與Api
+#### 申請Api利用google console 建立專案並申請一個api
+##### 需要先編輯 為Android應用程式限定
+##### 套件名稱 自己的packge SHA-1 憑證指紋 Grandle在右手邊(預設) 參考資料有
+#### google_maps_api.xml
+```xml
+<!-- 先利用 new->google->google maps activity 建立基本的檔案-->
+<resources>
+<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">輸入自己的api</string>
+</resources>
+```
+#### activity_maps.xml
+```xml
+<!-- 如果不是用new 的通常上面的資料包會找不到 -->
+
+...
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp" />
+...
+```
+#### MapsActivity 利用LatLng 來存放座標 
+```js
+LatLng[] aryLatLng= new LatLng[]{new LatLng(v,v1),new LatLng(v,v1)}
+```
+# Android code 
 #### 對話框
 ```js
  //對話框 ;Toast.LENGTH_LONG -->對話框持續大概3秒
@@ -99,3 +141,5 @@ https://blog.gtwang.org/windows/how-to-batch-rename-files-in-windows/
 https://blog.csdn.net/ACM_TH/article/details/51103889
 ###### 重新定義gridview 處理scrollview與girdview衝突
 https://stackoverflow.com/questions/8481844/gridview-height-gets-cut
+###### 找自己的SHA憑證
+https://anson-site.blogspot.com/2018/02/sha1md5.html
