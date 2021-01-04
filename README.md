@@ -110,6 +110,10 @@ drawble的資料夾是沒辦法自己建立的 只能在res上new一個resource 
 ```js
 LatLng[] aryLatLng= new LatLng[]{new LatLng(v,v1),new LatLng(v,v1)}
 ```
+### MapsActivity marker 來設置圖釘位置
+```js
+mMap.addMarker( new MarkerOptions().position(latLng));
+```
 # Android code 
 ### 對話框
 ```js

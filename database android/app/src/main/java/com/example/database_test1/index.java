@@ -50,7 +50,7 @@ public class index extends AppCompatActivity {
         Bundle bundle=intent.getExtras();
         String act=bundle.getString("act"), pwd=bundle.getString("pwd");
         String str = "歡迎  " + act +"  ";
-        //txtShow.setText(str);
+        txtShow.setText(str);
     }
 
     private  Button.OnClickListener buttonListener=new Button.OnClickListener(){

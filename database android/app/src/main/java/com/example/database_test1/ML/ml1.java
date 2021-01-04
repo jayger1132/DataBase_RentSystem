@@ -63,7 +63,8 @@ public class ml1 extends AppCompatActivity {
         Bundle bundle=intent.getExtras();
         String selectR=bundle.getString("selectR");
         Integer id=bundle.getInt("id");
-        String str = selectR +"  "+id;
+        //String str = selectR +"  "+id;
+        String str = "苗栗縣苗栗市文發路164巷1號";
         txtShow.setText(str);
         txtprice.setText("28000元/月");
         txttime.setText("一年");

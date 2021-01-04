@@ -112,7 +112,7 @@ private Runnable mutiThread = new Runnable(){
                     if(textaccount.getText().toString().equals(act2)){
                         if(textpassword.getText().toString().equals(pwd2)){ //login correct
                             flag=true;
-                            Toast.makeText(getApplicationContext(),"唉唷不錯唷",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"登入成功",Toast.LENGTH_LONG).show();
                             intentact=act2;
                             intentpwd=pwd2;
                         }

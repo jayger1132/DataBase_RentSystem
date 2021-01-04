@@ -63,7 +63,8 @@ public class tl1 extends AppCompatActivity {
         Bundle bundle=intent.getExtras();
         String selectR=bundle.getString("selectR");
         Integer id=bundle.getInt("id");
-        String str = selectR +"  "+id;
+        //String str = selectR +"  "+id;
+        String str = "苗栗縣銅鑼鄉樟樹村";
         txtShow.setText(str);
         txtprice.setText("6000元/月");
         txttime.setText("三個月");

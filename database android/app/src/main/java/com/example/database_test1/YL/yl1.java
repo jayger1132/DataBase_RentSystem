@@ -64,7 +64,8 @@ public class yl1 extends AppCompatActivity {
         Bundle bundle=intent.getExtras();
         String selectR=bundle.getString("selectR");
         Integer id=bundle.getInt("id");
-        String str = selectR +"  "+id;
+        //String str = selectR +"  "+id;
+        String str = "苗栗縣苑裡鎮介壽路";
         txtShow.setText(str);
         txtprice.setText("6,500 元/月");
         txttime.setText("一年");

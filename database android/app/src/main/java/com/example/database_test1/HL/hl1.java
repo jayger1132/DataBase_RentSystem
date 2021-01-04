@@ -71,7 +71,8 @@ public class hl1 extends AppCompatActivity {
         Bundle bundle=intent.getExtras();
         String selectR=bundle.getString("selectR");
         Integer id=bundle.getInt("id");
-        String str = selectR +"  "+id;
+        //String str = selectR +"  "+id;
+        String str = "苗栗縣後龍鎮四份仔路";
         txtShow.setText(str);
         txtprice.setText("7,500 元/月");
         txttime.setText("最短一年");

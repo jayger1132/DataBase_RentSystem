@@ -80,6 +80,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setCompassEnabled(true);     // 顯示指南針
         mMap.getUiSettings().setZoomControlsEnabled(true);// 顯示縮放圖示
         zoom = 17; //設定放大倍率1(地球)-21(街景)
+        mMap.addMarker( new MarkerOptions().position(latLng));
 
         // 建立觀看地圖的視點位罝
         CameraPosition cameraPosition = new CameraPosition.Builder()
