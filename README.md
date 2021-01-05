@@ -133,8 +133,6 @@ public class index extends AppCompatActivity {
     Integer count;
     ...
 ```
-
-
 ##### 參考資料 
 https://stackoverflow.com/questions/45940861/android-8-cleartext-http-traffic-not-permitted
 ###### AndroidLogin
@@ -147,3 +145,7 @@ https://blog.csdn.net/ACM_TH/article/details/51103889
 https://stackoverflow.com/questions/8481844/gridview-height-gets-cut
 ###### 找自己的SHA憑證
 https://anson-site.blogspot.com/2018/02/sha1md5.html
+###### ubuntu phpmyadmin 架設
+https://ithelp.ithome.com.tw/articles/10216815
+###### ubuntu mysql 架設
+https://www.peterdavehello.org/2019/12/set-mysql-password-login-and-create-database-on-ubuntu-18-04-and-later
